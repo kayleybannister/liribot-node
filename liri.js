@@ -11,10 +11,13 @@ var spotify = new Spotify(keys.spotify);
 
 // Axios code
 var axios = require("axios");
-var movieTitle = process.argv[2];
 
+var selectThis = process.argv[2];
+var selection = process.argv[3];
+
+if (selectThis === "movie-this") {
 // We then run the request with axios module on a URL with a JSON
-axios.get("http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilogy").then(
+axios.get("http://www.omdbapi.com/?t=" + selection + "&y=&plot=short&apikey=trilogy").then(
   function(response) {
     // Then we print out the imdbRating
     console.log("TITLE: " + response.data.Title);
@@ -25,4 +28,23 @@ axios.get("http://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=tri
     console.log("PLOT: " + response.data.Plot);
     console.log("ACTORS: " + response.data.Actors);
   }
-);
+)}
+
+else if (selectThis === "concert-this")
+{
+    //run code for Bands in Town API to display location and venue for this artist
+    //Need Bands in Town API - requested
+    console.log("CONCERT FOR: " + selection);
+}
+
+else if (selectThis === "spotify-this-song")
+{
+    //run code to Spotify API to display artist info
+    console.log("PLAY THIS SONG: " + selection);
+}
+
+else if (selectThis === "do-what-it-says") 
+{
+    //run code to add to random.txt file
+    console.log("YOU TOLD ME TO: " + selection);
+}
