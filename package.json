@@ -22,5 +22,10 @@
   "bugs": {
     "url": "https://github.com/kayleybannister/liribot-node/issues"
   },
-  "homepage": "https://github.com/kayleybannister/liribot-node#readme"
+  "homepage": "https://github.com/kayleybannister/liribot-node#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "dotenv": "^8.0.0",
+    "node-spotify-api": "^1.1.1"
+  }
 }
