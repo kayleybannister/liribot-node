@@ -12,10 +12,10 @@ var spotify = new Spotify(keys.spotify);
 // Axios code
 var axios = require("axios");
 
-var selectThis = process.argv[2];
+var liriRequest = process.argv[2];
 var selection = process.argv[3];
 
-if (selectThis === "movie-this") {
+if (liriRequest === "movie-this") {
 // We then run the request with axios module on a URL with a JSON
 axios.get("http://www.omdbapi.com/?t=" + selection + "&y=&plot=short&apikey=trilogy").then(
   function(response) {
@@ -30,21 +30,27 @@ axios.get("http://www.omdbapi.com/?t=" + selection + "&y=&plot=short&apikey=tril
   }
 )}
 
-else if (selectThis === "concert-this")
+else if (liriRequest === "concert-this")
 {
     //run code for Bands in Town API to display location and venue for this artist
     //Need Bands in Town API - requested
     console.log("CONCERT FOR: " + selection);
 }
 
-else if (selectThis === "spotify-this-song")
+else if (liriRequest === "spotify-this-song")
 {
     //run code to Spotify API to display artist info
+    spotify.get("")
     console.log("PLAY THIS SONG: " + selection);
 }
 
-else if (selectThis === "do-what-it-says") 
+else if (liriRequest === "do-what-it-says") 
 {
     //run code to add to random.txt file
     console.log("YOU TOLD ME TO: " + selection);
+}
+
+else {
+    console.log("ERROR - This command is not recognized." + "\nPlease select one of the below commands:" +
+    "\nmovie-this spotify-this-song do-what-it-says concert-this");
 }
