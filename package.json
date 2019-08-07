@@ -1,0 +1,26 @@
+{
+  "name": "liribot-node",
+  "version": "1.0.0",
+  "description": "command line program that takes user input and returns info from OMBD, Spotify, and Bands in Town",
+  "main": "liri.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kayleybannister/liribot-node.git"
+  },
+  "keywords": [
+    "node",
+    "axios",
+    "spotify",
+    "ombd",
+    "CLI"
+  ],
+  "author": "Kayley Bannister",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kayleybannister/liribot-node/issues"
+  },
+  "homepage": "https://github.com/kayleybannister/liribot-node#readme"
+}
