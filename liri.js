@@ -94,7 +94,16 @@ function showSong(song) {
         if (err) {
             return console.log("Error occurred: " + err);
         }
-        console.log(data.artist);
+        
+        else {
+                for (var i = 0; i < data.tracks.items.length; i++){
+                console.log("ARTIST: " + data.tracks.items[i].artists[i].name);
+                console.log("SONG NAME: " + data.tracks.items[i].name);
+                console.log("SPOTIFY LINK: " + data.tracks.items[i].preview_url);
+                console.log("ALBUM: " + data.tracks.items[i].album.name);
+                console.log("========================== \n");
+
+                }
+            }
     });
-    console.log("PLAY THIS SONG: " + song);
 };
