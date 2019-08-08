@@ -20,8 +20,7 @@ movie-this
 spotify-this-song
 ![spotify-this-song](spotify-this-song.png)
 
-** I tried clicking on these link paths for my images and it keeps asking me to select an application in the app store to open
-** all screenshots are saved in the GitHub repository
+** all screenshots are saved in the GitHub repository readMe file
 
 
 
