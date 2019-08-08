@@ -12,6 +12,9 @@ var spotify = new Spotify(keys.spotify);
 // Axios code
 var axios = require("axios");
 
+// FS code
+var fs = require("fs");
+
 //===========================================================================================
 
 app( process.argv[2], process.argv[3] );
@@ -107,3 +110,28 @@ function showSong(song) {
             }
     });
 };
+
+function doIt(data) {
+    fs.readFile("random.txt", "utf8", function(error, data) {
+
+        var dataArr = data.split(",");
+        console.log(dataArr);
+
+            if (data.includes("concert-this")){
+                showBand();
+                }
+
+            else if(data.includes("movie-this")){
+                showMovie();
+                }
+
+            else if (data.includes("spotify-this-song")){
+                showSong();
+                }
+            else {
+                return console.log(error);
+            }
+        }
+        );
+};
+
